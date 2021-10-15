@@ -23,7 +23,7 @@ const CheckoutForm = () => {
   const [error, setError] = useState(null)
   const [processing, setProcessing] = useState('')
   const [disabled, setDisabled] = useState(true)
-  const [clientSecret, setClientSecret] = useState('')
+  const [clientSecret, setClientSecret] = useState(" ")
   const stripe = useStripe()
   const elements = useElements()
 
@@ -36,7 +36,7 @@ const CheckoutForm = () => {
       )
       setClientSecret(data.clientSecret)
     } catch (error) {
-      // console.log(error.response)
+      
     }
   }
   useEffect(() => {
